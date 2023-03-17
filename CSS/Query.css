@@ -1,0 +1,189 @@
+/*--- Start Media Query For Container ---*/
+/* Small */
+@media(min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media(min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media(min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/*--- End Media Query For Container ---*/
+
+/*--- Start Media Query For Header ---*/
+
+@media(max-width:767px) {
+    header {
+        height: 100px;
+    }
+
+    header .container {
+        justify-content: center;
+    }
+
+    header .container > ul > li > a {
+        font-size: 14px;
+        padding: 12px 10px;
+        height: 40px;
+    }
+
+    header .logo {
+        width: 100%;
+        height: 60px;
+    }
+}
+
+/*--- End Media Query For Header ---*/
+
+/*--- Start Media Query For Mega Menu ---*/
+@media(max-width: 991px) {
+    header .mega-menu img {
+        display: none;
+    }
+
+    header .mega-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+    }
+
+    header .mega-menu .links {
+        width: 100%;
+    }
+
+    header .mega-menu .links > li::after {
+        content: '';
+        background-color: #cccccc8f;
+        height: 1px;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+/*--- End Media Query For Mega Menu ---*/
+/*--- Start Media Query For Our Skills ---*/
+@media(max-width: 991px) {
+    .our-skills img {
+        display: none;
+    }
+}
+
+/*--- End Media Query For Our Skills ---*/
+/*--- Start Media Query For Our Work Steps ---*/
+@media(max-width: 767px) {
+    .how-work .box {
+        flex-direction: column;
+    }
+
+    .how-work .box img {
+        margin: 0;
+    }
+
+    .how-work .box .text-content {
+        text-align: center;
+    }
+}
+
+@media(max-width: 991px) {
+    .how-work .container {
+        gap: 40px;
+    }
+
+    .how-work .container {
+        flex-direction: column;
+    }
+
+    .how-work .box h3 {
+        margin: 25px 0px 8px;
+        font-size: 21px;
+    }
+}
+
+/*--- End Media Query For Our Work Steps ---*/
+/*--- Start Media Query For Events ---*/
+@media(max-width: 991px) {
+    .events img {
+        display: none;
+    }
+}
+
+@media(max-width: 767px) {
+    .events .form {
+        flex-direction: column;
+        border-radius: 0;
+        padding: 20px;
+    }
+
+    .events .form input,
+    .events .form .submit {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+/*--- End Media Query For Events ---*/
+/*--- Start Media Query For Plans ---*/
+@media(min-width: 1200px) {
+    .pricing .plan:nth-child(2) {
+        transform: translateY(-20px);
+    }
+}
+
+/*--- End Media Query For Plans ---*/
+/*--- Start Media Query For Videos ---*/
+@media (max-width: 991px) {
+    .videos .holder {
+        flex-direction: column;
+    }
+}
+
+/*--- End Media Query For Videos ---*/
+/*--- Start Media Query For Discount ---*/
+@media(max-width: 991px) {
+    .discount .holder {
+        flex-direction: column;
+    }
+
+    .discount .right,
+    .discount .left {
+        width: 100%;
+    }
+}
+
+/*--- End Media Query For Discount ---*/
+/*--- Start Media Query For footer ---*/
+@media(max-width: 767px) {
+    .footer {
+        text-align: center;
+    }
+
+    .footer .box .social {
+        justify-content: center;
+    }
+
+    .footer .box .address li {
+        flex-direction: column;
+    }
+
+    .footer .box .address li i {
+        margin-bottom: 5px;
+        width: 25px;
+    }
+}
+
+/*--- End Media Query For footer ---*/
