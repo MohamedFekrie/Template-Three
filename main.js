@@ -40,24 +40,4 @@ let pDelaiy = setTimeout(() => {
 /* End The Type Writer Effects On The Landing Page */
 
 
-let galleryImgs = document.querySelectorAll('.gallery .image img');
-let overlay = document.querySelector('.gallery .overlay');
-galleryImgs.forEach(img => {
-    img.addEventListener(`click`, (e) => {
-        overlay.style.display = "block"
-        // Create Img Element
-        let theImg = document.createElement(`img`);
-        theImg.src = img.src;
-        document.querySelector(`.img-box`).appendChild(theImg);
-    if (e.target.dataset.target === "gallery-overlay") {
-     console.log(`done`)
- }
-    })
-})
 
-// click on gallert overlay to remove it
-/*document.addEventListener(`click`, (e) => {
-    if (e.target.dataset.target = `gallery-overlay`) {
-        console.log(e.target.dataset.target)
-    }
-})*/
