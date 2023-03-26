@@ -926,8 +926,7 @@ header .mega-menu .links > li a i {
 }
 
 .our-skills .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    display: flex;
     align-items: center;
 }
 
@@ -936,14 +935,15 @@ header .mega-menu .links > li a i {
     flex-direction: column;
     justify-content: space-around;
     height: 100%;
-    gap: 10px
+    gap: 10px;
+    flex: 1;
 }
 
 .our-skills .skills-container .skill {
     position: relative;
 }
 
-.our-skills .skills-container .skill span {
+.our-skills .skills-container .skill > span {
     display: block;
     width: 100%;
     height: 30px;
@@ -952,30 +952,17 @@ header .mega-menu .links > li a i {
     position: relative;
 }
 
-.our-skills .skills-container .skill span[data-progress]::before {
-    content: '';
+.our-skills .skills-container .skill span .the-progress {
     position: absolute;
+    width: 0%;
+    top: 0;
+    left: 0;
     height: 100%;
     background-color: var(--main-color);
+    transition: .9s;
 }
 
-.our-skills .skills-container .skill:first-child span::before {
-    width: 80%;
-}
-
-.our-skills .skills-container .skill:nth-child(2) span::before {
-    width: 90%;
-}
-
-.our-skills .skills-container .skill:nth-child(3) span::before {
-    width: 70%;
-}
-
-.our-skills .skills-container .skill:last-child span::before {
-    width: 85%;
-}
-
-.our-skills .skills-container .skill span::after {
+.our-skills .skills-container .skill span span::after {
     content: attr(data-progress) " ";
     position: absolute;
     text-align: center;
@@ -989,6 +976,7 @@ header .mega-menu .links > li a i {
 }
 
 /* Our Skills */
+
 /* How It Work */
 .how-work {
     padding: var(--section-padding);
@@ -1096,7 +1084,7 @@ header .mega-menu .links > li a i {
 
 .events .time .unit span:first-child {
     display: block;
-    padding: 15px;
+    padding: 15px 0;
     font-size: 35px;
     color: var(--main-color);
     font-weight: bold;
@@ -1340,7 +1328,8 @@ header .mega-menu .links > li a i {
     transition: var(--main-transition);
 }
 
-.videos .list ul li:hover {
+.videos .list ul li:hover,
+.videos .list ul li:first-child {
     background-color: rgb(244 244 244 / 50%);
     color: var(--main-color)
 }
